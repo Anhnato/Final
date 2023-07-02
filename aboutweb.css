@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(14, 2, 42);
+}
+
+.nav-link:hover {
+    background-color: black;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+  }
+  .section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+  }
+  .section-content {
+    text-align: justify;
+    margin-bottom: 50px;
+    color: white;
+  }
+  .about-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }

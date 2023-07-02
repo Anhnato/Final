@@ -30,4 +30,8 @@ p {
     p {
         font-size: small;
     }
+
+    .btn-dark{
+        transform: translateX(-90px);
+    }
 }

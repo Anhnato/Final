@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(14, 2, 42);
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+  }
+  .contact-form input[type="text"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact-form button:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .nav-link:hover {
+    background-color: black;
+}
+
+.section-heading{
+    text-align: center;
+    color: white;
+}

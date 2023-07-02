@@ -22,16 +22,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link" href="homeweb.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link" href="contactweb.html">CONTACT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT US</a>
+                        <a class="nav-link" href="aboutweb.html">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PRODUCTS</a>
+                        <a class="nav-link" href="products.html">PRODUCTS</a>
                     </li>
                 </ul>
             </div>
@@ -47,23 +47,56 @@
             <form action="#" method="post">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone number:</label>
-                    <input type="text" class="form-control" id="phone"  name="phone" placeholder="Enter your phone number" required>
+                    <input type="number" class="form-control" id="phone" name="phone" required placeholder="Enter your phone number" required>
                 </div>
-                <input type="submit" value="Submit">
+
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="city" name="city" required placeholder="Enter your city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="random-number">Unique number:</label>
+                    <input type="text" class="form-control" id="unique-number" name="unique-number" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="order-date">Order date:</label>
+                    <input type="text" class="form-control" id="order-date" name="order-date" readonly>
+                </div>
+
+                <a href="order-confirm.html" class="btn btn-dark">Submit</a>
             </form>
         </div>
 
         <!-- jquery, popper and bootstrap js-->
+        <script>
+            var randomNumber = Math.floor(Math.random() * 900000) + 100000;
+            document.getElementById("unique-number").value = randomNumber;
+
+            var currentDate = new Date();
+        
+            var year = currentDate.getFullYear();
+            var month = String(currentDate.getMonth() + 1).padStart(2, '0');
+            var day = String(currentDate.getDate()).padStart(2, '0');
+        
+            var formattedDate = year + '-' + month + '-' + day;
+        
+            document.getElementById("order-date").value = formattedDate;
+
+            var data = document.getElementById("dataElement").textContent;
+        </script>   
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
